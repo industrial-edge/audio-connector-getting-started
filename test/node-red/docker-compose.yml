@@ -1,0 +1,26 @@
+version: '2.4'
+
+services:
+    ie-flow-creator:
+        container_name: ie-flow-creator
+        image: 'nodered/node-red'
+        restart: on-failure
+        privileged: true
+        
+        networks:
+          - proxy-redirect
+        volumes:
+          - node-red-data:/data
+        hostname: ie-flow-creator
+        mem_limit: 1gb
+        ports:
+          - '1880:1880'
+
+#### Network ####
+networks: 
+    proxy-redirect:
+        external: true
+        name: proxy-redirect
+
+volumes:
+    node-red-data:

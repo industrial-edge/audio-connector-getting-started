@@ -1,0 +1,14 @@
+{
+    "connection_name": "piano2.wav",
+    "databus":{
+        "databus_host": "ie-databus",
+        "databus_port": 1883,
+        "databus_username": "edge",
+        "databus_password": "edge",
+        "metadata_qos": 1,
+        "streaming_qos": 2,
+        "output_qos": 0,
+        "metadata_topic": "ie/m/j/simatic/v1/cs-mqtt-gtw/dp/r",
+        "output_topic": "ie/d/j/audio-processor/output"
+    }
+}

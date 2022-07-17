@@ -1,0 +1,21 @@
+version: '2.4'
+
+services:
+    ie-databus:
+        container_name: ie-databus
+        image: 'eclipse-mosquitto:1.6'
+        restart: on-failure
+        privileged: true
+        
+        networks:
+          - proxy-redirect
+        hostname: ie-databus
+        mem_limit: 1gb
+        ports:
+          - '1883:1883'
+
+#### Network ####
+networks: 
+    proxy-redirect:
+        external: true
+        name: proxy-redirect
