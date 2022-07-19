@@ -12,7 +12,7 @@ Once imported into the Catalog, install the Edge Oscilloscope app onto your Edge
 
 If needed, you can modify the configuration file template during installation:
 
-![Configuration Template](/images/install-config-file.png)
+![Configuration Template](images/install-config-file.png)
 
 **NOTE**: databus credentials must be set this way.
 
@@ -24,28 +24,28 @@ With the exception of databus settings, all configuration of the Oscilloscope ca
 
 After (re-)starting the Oscilloscope, the initial screen will be blank because no **Connection** has been selected:
 
-![No Connection](/images/initial-screen.png)
+![No Connection](images/initial-screen.png)
 
 Select a **Connection** from the drop-down list:
 
-![Connection Selected](/images/connection-selected.png)
+![Connection Selected](images/connection-selected.png)
 
 If no **Connections** are found, make sure you've specified the right **Metadata Topic** and that your databus credentials are correct.
 Additionally, make sure that data is actually being published on that **Metadata Topic**.
 This can be confirmed in Flow Creator, for example:
 
-![Check Metadata](/images/metadata-flow-creator.png)
+![Check Metadata](images/metadata-flow-creator.png)
 
 ### Plot Settings
 
 Once you've selected a **Connection**, you can adjust the plot settings in the configuration pane.
 For example, to adjust the vertical scale of the plot, change the **Plot Height** parameter and click **Update**:
 
-![Plot Height](/images/adjust-plot-height.png)
+![Plot Height](images/adjust-plot-height.png)
 
 Similarly, to adjust the horizontal resolution of the plot, you can adjust the horizontal scale via the **Plot Width** parameter or the number of distinct datapoints shown via the **Plot Points** parameter:
 
-![Plot Resolution](/images/adjust-plot-resolution.png)
+![Plot Resolution](images/adjust-plot-resolution.png)
 
 ## Operation
 
@@ -55,11 +55,11 @@ Once operational, you can simply monitor any signals of interest using the real-
 
 To begin recording, click **Start**; this will create a pop-up alert informing you that the recording is active:
 
-![Start Recording](/images/start-recording.png)
+![Start Recording](images/start-recording.png)
 
 Once you've collected sufficient data, click **Stop** to end the recording and **Download** to send the captured signals to your PC as a `.wav` file:
 
-![Download Recording](/images/download-recording.png)
+![Download Recording](images/download-recording.png)
 
 If you don't wish to download the recording, simply **Clear** it and begin again.
 
@@ -71,6 +71,6 @@ In this case, on **Download**, all recordings will be downloaded together as a s
 
 In case you want to retrieve older recordings, you can visit the App Management tab of the Edge Device and see a full list of previous recordings:
 
-![Retrieve Files](/images/view-app-files.png)
+![Retrieve Files](images/view-app-files.png)
 
 **NOTE**: to limit storage / disk usage of the Oscilloscope, the total number of recordings persisted on the disk is limited to 100 files (i.e., 5GB maximum).
