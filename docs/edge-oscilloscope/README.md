@@ -18,7 +18,10 @@ If needed, you can modify the configuration file template during installation:
 
 ## Configuration
 
-With the exception of databus settings, all configuration of the Oscilloscope can be done from within the web browser app.
+With the exception of databus settings, all configuration of the Oscilloscope can be done from the web interface of the app.
+The available configuration parameters are shown in the `config.json` file of the app:
+
+![Configuration File](images/config-json.png)
 
 ### Connections
 
