@@ -53,6 +53,68 @@ This list is updated upon restart of the **Audio Connector**.
 
 ![IIH Deploy Configuration](images/iih-deploy-tags.png)
 
+### Databus Gateway Configuration
+
+Now, to forward the configured data tags from the **Audio Connector** onto the **IE Databus**, we use the **IIH Databus Gateway**.
+This can be performed either from the **IIH Common Configurator** via the "Publish to Databus" checkboxes,
+or via direct configuration of the **IIH Databus Gateway** from your IEM.
+
+An example **IIH Databus Gateway** configuration is shown below:
+```json
+{
+  "configs":[
+    {
+      "$schema":"https://siemens.com/connectivity_suite/schemas/mqtt-gw/1.0.0/config.json",
+      "config":{
+        "parameters":{
+          "mqtt_server_name":"ie-databus",
+          "mqtt_client_id":"cs-mqtt-gateway",
+          "user_name":"edge",
+          "password":"edge",
+          "pub_topic_metadata":"ie/m/j/simatic/v1/cs-mqtt-gtw/dp/r",
+          "pub_topic_status":"ie/s/j/simatic/v1/cs-mqtt-gtw/status"
+	      },
+        "data_sources":[
+          {
+            "name":"Umik-1",
+            "driver_instance":"csaudioconn",
+            "connection_name":"Umik-1  Gain: 18dB: USB Audio (hw:3,0) at index 4",
+            "parameters":{
+              "request_cycle":85,
+              "pub_topic_timeseries":  "ie/d/j/simatic/v1/csaudioconn/dp/r/audio-device-1",
+              "subscr_topic_write_req":"ie/d/j/simatic/v1/csaudioconn/dp/w/audio-device-1",
+              "pub_topic_write_rsp":   "ie/d/j/simatic/v1/csaudioconn/dp/w/audio-device-1/response",
+              "pub_topic_read_rsp":    "ie/d/j/simatic/v1/csaudioconn/dp/r/audio-device-1/response",
+              "subscr_topic_read_req": "ie/d/j/simatic/v1/csaudioconn/dp/r/audio-device-1/request"
+            },
+            "datapoints":[
+              { "name":"ch0", "parameters": {"data_type":"Int"}}
+            ]
+          },
+          {
+            "name":"Scarlett",
+            "driver_instance":"csaudioconn",
+            "connection_name":"Scarlett 18i20 USB: Audio (hw:1,0) at index 2",
+            "parameters":{
+              "request_cycle":85,
+              "pub_topic_timeseries":  "ie/d/j/simatic/v1/csaudioconn/dp/r/audio-device-2",
+              "subscr_topic_write_req":"ie/d/j/simatic/v1/csaudioconn/dp/w/audio-device-2",
+              "pub_topic_write_rsp":   "ie/d/j/simatic/v1/csaudioconn/dp/w/audio-device-2/response",
+              "pub_topic_read_rsp":    "ie/d/j/simatic/v1/csaudioconn/dp/r/audio-device-2/response",
+              "subscr_topic_read_req": "ie/d/j/simatic/v1/csaudioconn/dp/r/audio-device-2/request"
+            },
+            "datapoints":[
+              { "name":"ch0", "parameters": {"data_type":"Int"}},
+              { "name":"ch1", "parameters": {"data_type":"Int"}}
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+
 ## Operation
 
 To verify that the **Audio Connector** is functioning properly, we can use **IE Flow Creator** to monitor the traffic on the **IE Databus**:
