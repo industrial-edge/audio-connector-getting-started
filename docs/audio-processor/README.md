@@ -64,8 +64,26 @@ Configuration of the audio processor is specified in this [config.json](../../ap
 }
 ```
 
-Add description of the configuration here:
-
 ### Verify operation
 
-Add description here
+To verify that the **Audio Processor** is working properly, we can use **IE Flow Creator** to view the traffic on the **IE Databus**.
+Results of the processed audio frames will be published onto `ie/d/j/audio-processor/output`, e.g.:
+```json
+{
+    "timestamp":"2022-07-24T02:47:01.9981570Z",
+    "connection_name":"piano2.wav",
+    "streaming_topic":"ie/d/j/simatic/v1/cs-mqtt-gtw/dp/r",
+    "result":[
+        2779.5262451030744,
+        2742.225205091561
+        ]
+}
+```
+
+Using a `debug` node in **IE Flow Creator**, we can view both the raw input data stream as well as the processed output:
+
+![Flow Creator Debug](images/flow-creator-data.png)
+
+Additionally, the **Audio Processor** logs include periodic diagnostics reports which can be used to measure throughput or detect any packet loss:
+
+![Diagnostics Logs](images/diagnostics-logs.png)
