@@ -1,19 +1,19 @@
-# Getting Started with the Audio Connector for Siemens Industrial Edge
+# Getting Started with the Audio Connector
 
 ## Description
 
 In this Getting Started guide, we provide instructions for setting up and using the [Audio Connector](docs/audio-connector/README.md),
 as well as several auxiliary applications on Siemens Industrial Edge.
 For example, we provide instructions here for using the [Edge Oscilloscope](docs/edge-oscilloscope/README.md) example application,
-which is provided for free on Siemens Industry Online Support (SIOS).
+which is provided for free via Siemens Industry Online Support (SIOS).
 Additionally, we provide as an open-source example in this repository an [Audio Processor](docs/audio-processor/README.md) application,
 which can serve as a template for advanced users to develop their own custom audio analytics applications for Industrial Edge.
 
 ### Overview
 
 The purpose of this repository is to provide a guide for new users of the **Audio Connector** on Siemens Industrial Edge.
-The intent is to serve as a universal entrypoint for working with the **Audio Connector**, but to keep the content concise,
-many details are ommitted here, so interested readers should refer to the [existing documentation](#documentation) elsewhere.
+The intent is to serve as a common entrypoint for working with the **Audio Connector**, but to keep the content concise,
+many details are ommitted, so interested readers should refer to other [existing documentation](#documentation).
 
 ### General Task
 
