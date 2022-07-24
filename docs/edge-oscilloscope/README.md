@@ -19,9 +19,27 @@ If needed, you can modify the configuration file template during installation:
 ## Configuration
 
 With the exception of databus settings, all configuration of the Oscilloscope can be done from the web interface of the app.
-The available configuration parameters are shown in the `config.json` file of the app:
+The available configuration parameters are shown in the `config.json` file of the app, e.g.:
 
-![Configuration File](images/config-json.png)
+```json
+{
+    "parameters": {
+        "sampling_rate": 48000,
+        "plot_gain": 0.0000305,
+        "plot_width": 0.5,
+        "plot_points": 1000,
+        "metadata_topic": "ie/m/j/simatic/v1/cs-mqtt-gtw/dp/r"
+    },
+    "databus": {
+        "databus_host": "ie-databus",
+        "databus_port": 1883,
+        "databus_username": "edge",
+        "databus_password": "edge",
+        "metadata_qos": 1,
+        "streaming_qos": 2
+    }
+}
+```
 
 ### Connections
 

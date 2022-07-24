@@ -35,13 +35,13 @@ Configuration of the **Audio Connector** is handled through the **IIH Common Con
 
 ![IIH Audio Connector](images/iih-audio-connector.png)
 
-3. If your audio device is not already shown, add it as a new datasource:
+3. If your audio device is not already shown, add it as a new datasource from the `Tags` tab:
 
 ![IIH Add Connection](images/iih-data-source.png)
 
 **Note**: all audio devices discovered by the **Audio Connector** will be listed in the `dev_log.json` file,
 which can be downloaded from the app management page of the IED.
-This list is updated upon restart of the **Audio Connector**.
+The `dev_log.json` list is updated upon restart of the **Audio Connector**.
 
 4. Now, add tags to that connection:
 
