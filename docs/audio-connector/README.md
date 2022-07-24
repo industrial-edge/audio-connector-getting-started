@@ -115,6 +115,92 @@ An example **IIH Databus Gateway** configuration is shown below:
 }
 ```
 
+Note that the `connection_name` fields must match those in the `audio-conn-config.json` of the **Audio Connector**, e.g.:
+
+```json
+{
+    "configs": [
+        {
+            "$schema": "https://siemens.com/connectivity_suite/schemas/audio-connector/1.0.0/config.json",
+            "config": {
+                "connections": [
+                    {
+                        "parameters": {
+                            "device_name": "Scarlett 18i20 USB: Audio (hw:1,0)",
+                            "sampling_rate": 44100,
+                            "frame_size": 4096,
+                            "stream_format": "Int16"
+                        },
+                        "name": "Scarlett 18i20 USB: Audio (hw:1,0) at index 2",
+                        "datapoints": [
+                            {
+                                "parameters": {},
+                                "address": {
+                                    "channel": 0
+                                },
+                                "name": "ch0",
+                                "access_mode": "r",
+                                "array_dimensions": [
+                                    0
+                                ],
+                                "data_type": "Int"
+                            },
+                            {
+                                "parameters": {},
+                                "address": {
+                                    "channel": 1
+                                },
+                                "name": "ch1",
+                                "access_mode": "r",
+                                "array_dimensions": [
+                                    0
+                                ],
+                                "data_type": "Int"
+                            }
+                        ]
+                    },
+                    {
+                        "parameters": {
+                            "device_name": "Umik-1  Gain: 18dB: USB Audio (hw:3,0)",
+                            "sampling_rate": 48000,
+                            "frame_size": 4096,
+                            "stream_format": "Int16"
+                        },
+                        "name": "Umik-1  Gain: 18dB: USB Audio (hw:3,0) at index 4",
+                        "datapoints": [
+                            {
+                                "parameters": {},
+                                "address": {
+                                    "channel": 0
+                                },
+                                "name": "ch0",
+                                "access_mode": "r",
+                                "array_dimensions": [
+                                    0
+                                ],
+                                "data_type": "Int"
+                            },
+                            {
+                                "parameters": {},
+                                "address": {
+                                    "channel": 1
+                                },
+                                "name": "ch1",
+                                "access_mode": "r",
+                                "array_dimensions": [
+                                    0
+                                ],
+                                "data_type": "Int"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+
 ## Operation
 
 To verify that the **Audio Connector** is functioning properly, we can use **IE Flow Creator** to monitor the traffic on the **IE Databus**:
