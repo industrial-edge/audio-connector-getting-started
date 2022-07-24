@@ -21,6 +21,39 @@ To build the **Audio Processor** docker image:
 
 ![Docker Build Result](images/docker-build.png)
 
+### Test the app locally
+
+An audio file playback program is provided in the `./test/playback` directory
+which emulates a data stream from an audio device, as if provided by the **Audio Connector**.
+This playback program can be used to verify the data flow through the **Audio Processor**.
+
+First, configure the **Audio Processor** to match that of the playback program,
+found [here](../../test/playback/config/config.json):
+```json
+{
+    "file_name": "piano2.wav",
+    "frame_size": 4096,
+    "databus": {
+        "databus_host": "ie-databus",
+        "databus_port": 1883,
+        "databus_username": "edge",
+        "databus_password": "edge",
+        "metadata_qos": 1,
+        "streaming_qos": 2,
+        "metadata_topic": "ie/m/j/simatic/v1/cs-mqtt-gtw/dp/r",
+        "streaming_topic": "ie/d/j/simatic/v1/cs-mqtt-gtw/dp/r"
+    }
+}
+```
+The `connection_name` for the **Audio Processor** must match the playback `file_name`,
+as well as the databus credentials and the `metadata_topic`.
+
+Then, run the following script from the `./test` directory of this repository:
+```sh
+sh start-playback-test.sh
+```
+This starts both the audio file playback program and the **Audio Processor** app.
+
 ## Upload App to the Industrial Edge Managment
 
 Please find below a short description how to publish your application in your IEM.
