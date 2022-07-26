@@ -48,7 +48,15 @@ found [here](../../test/playback/config/config.json):
 The `connection_name` for the **Audio Processor** must match the playback `file_name`,
 as well as the databus credentials and the `metadata_topic`.
 
-Then, run the following script from the `./test` directory of this repository:
+To download a sample audio file, run the following the `./test` directory of this repository:
+```sh
+mkdir -p playback/data
+curl --output playback/data/piano2.wav https://www.kozco.com/tech/piano2.wav
+```
+This downloads a short, free audio sample to a file called `piano2.wav`,
+but any other wave file can be used for testing.
+
+Then, run the following script:
 ```sh
 sh start-playback-test.sh
 ```
