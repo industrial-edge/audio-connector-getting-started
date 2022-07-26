@@ -56,21 +56,20 @@ Installation steps are covered in the following guides:
 1. [Audio Connector Installation](docs/audio-connector/README.md#installation)
 2. [Edge Oscilloscope Installation](docs/edge-oscilloscope/README.md#installation)
 3. [Build the Audio Processor](docs/audio-processor/README.md#build-the-application)
-4. [Deploy the Audio Processor](docs/audio-processor/README.md#deploy-the-app)
 
 ## Configuration
 
 Configuration instructions are provided in the following guides:
 1. [Audio Connector Configuration](docs/audio-connector/README.md#configuration)
 2. [Edge Oscilloscope Configuration](docs/edge-oscilloscope/README.md#configuration)
-3. [Configure the Audio Processor](docs/audio-processor/README.md#configure-the-app)
+3. [Audio Processor Configuration](docs/audio-processor/README.md#configure-the-app)
 
 ## Usage
 
 Usage information is covered in the following guides:
 1. [Audio Connector Operation](docs/audio-connector/README.md#operation)
 2. [Edge Oscilloscope Operation](docs/edge-oscilloscope/README.md#operation)
-3. [Verify Audio Processor Operation](docs/audio-processor/README.md#verify-operation)
+3. [Audio Processor Operation](docs/audio-processor/README.md#verify-operation)
 
 ## Documentation
 
