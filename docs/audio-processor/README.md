@@ -48,19 +48,17 @@ found [here](../../test/playback/config/config.json):
 The `connection_name` for the **Audio Processor** must match the playback `file_name`,
 as well as the databus credentials and the `metadata_topic`.
 
-To download a sample audio file, run the following the `./test` directory of this repository:
-```sh
-mkdir -p playback/data
-curl --output playback/data/piano2.wav https://www.kozco.com/tech/piano2.wav
-```
-This downloads a short, free audio sample to a file called `piano2.wav`,
-but any other wave file can be used for testing.
+A sample audio file called `piano2.wav` is provided in the `./test/playback/data` directory of this repository.
+This sample file was obtained from: https://www.kozco.com/tech/soundtests.html
 
-Then, run the following script:
+If you wish to use another audio file for testing, simply place it in the `./test/playback/data` directory and
+modify the `file_name` field in the [config.json](../../test/playback/config/config.json) file.
+
+Then, to run the full test, simply run the following script from the `./test` directory of this repository:
 ```sh
 sh start-playback-test.sh
 ```
-This starts both the audio file playback program and the **Audio Processor** app.
+This builds and runs both the audio file playback program and the **Audio Processor** app.
 
 ## Upload App to the Industrial Edge Managment
 
