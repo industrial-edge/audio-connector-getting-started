@@ -53,17 +53,17 @@ Edge apps:
 ## Installation
 
 Installation steps are covered in the following guides:
-1. [Install Audio Connector](docs/audio-connector/README.md#installation)
-2. [Install Edge Oscilloscope](docs/edge-oscilloscope/README.md#installation)
-3. [Build Audio Processor](docs/audio-processor/README.md#build-the-application)
-4. [Install Audio Processor](docs/audio-processor/README.md#deploy-the-app)
+1. [Audio Connector Installation](docs/audio-connector/README.md#installation)
+2. [Edge Oscilloscope Installation](docs/edge-oscilloscope/README.md#installation)
+3. [Build the Audio Processor](docs/audio-processor/README.md#build-the-application)
+4. [Deploy the Audio Processor](docs/audio-processor/README.md#deploy-the-app)
 
 ## Configuration
 
 Configuration instructions are provided in the following guides:
 1. [Audio Connector Configuration](docs/audio-connector/README.md#configuration)
-2. [Edge Oscilloscope Operation](docs/edge-oscilloscope/README.md#configuration)
-3. [Verify Audio Processor Operation](docs/audio-processor/README.md#configure-the-app)
+2. [Edge Oscilloscope Configuration](docs/edge-oscilloscope/README.md#configuration)
+3. [Configure the Audio Processor](docs/audio-processor/README.md#configure-the-app)
 
 ## Usage
 
