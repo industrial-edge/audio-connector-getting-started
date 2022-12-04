@@ -3,7 +3,7 @@ version: '2.4'
 services:
     ie-flow-creator:
         container_name: ie-flow-creator
-        image: 'nodered/node-red'
+        image: 'nodered/node-red:2.2.3'
         restart: on-failure
         privileged: true
         
