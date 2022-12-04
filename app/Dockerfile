@@ -1,4 +1,4 @@
-ARG BUILD_IMG=python:3.10.4-slim-bullseye
+ARG BUILD_IMG=python:3.10.6-slim-bullseye
 ARG DEPLOY_IMG=debian:bullseye-20220418-slim
 
 # build image
@@ -6,8 +6,8 @@ FROM ${BUILD_IMG}
 
 # install OS dependencies
 RUN apt-get update
-RUN apt-get install -y apt-utils
-RUN apt-get install -y gcc
+RUN apt-get install -y apt-utils=2.2.4
+RUN apt-get install -y gcc=4:10.2.1-1
 
 # install python dependencies
 COPY ./requirements.txt /app/requirements.txt
