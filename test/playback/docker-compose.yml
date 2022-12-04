@@ -6,7 +6,7 @@ services:
         image: 'audio-playback'
         build: 
           context: ../..
-          dockerfile: ./test/playback/Dockerfile
+          dockerfile: ./test/playback/Dockerfile.example
         restart: on-failure
         privileged: true
         networks:
